@@ -197,7 +197,7 @@ export default function ReportDetail() {
               Lugar del incidente
             </div>
             <MapContainer center={[report.latitude, report.longitude]} zoom={16} style={{ height: '100%', width: '100%' }} zoomControl={false}>
-              <TileLayer attribution='© Stadia Maps' url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
+              <TileLayer attribution='© OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <MapController center={[report.latitude, report.longitude]} />
               <Marker position={[report.latitude, report.longitude]} />
             </MapContainer>

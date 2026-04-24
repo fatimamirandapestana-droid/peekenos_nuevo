@@ -490,8 +490,8 @@ export default function ReportForm({ type }: ReportFormProps) {
           <div className="h-64 rounded-lg overflow-hidden border border-stone-200 relative group">
             <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
               <TileLayer
-                attribution='&copy; Stadia Maps &copy; OpenMapTiles &copy; OpenStreetMap contributors'
-                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                attribution='&copy; OpenStreetMap contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <MapController setPosition={setPosition} fetchAddress={fetchAddress} />
               <LocationMarker position={position} setPosition={setPosition} />

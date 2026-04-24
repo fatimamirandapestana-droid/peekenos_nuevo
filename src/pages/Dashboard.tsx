@@ -244,7 +244,10 @@ export default function Dashboard() {
 
           <div className="h-[450px] rounded-2xl overflow-hidden relative z-0 border border-stone-100 shadow-inner">
             <MapContainer center={[20.9676, -89.6210]} zoom={12} style={{ height: '100%', width: '100%' }}>
-              <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
+              <TileLayer
+                attribution='&copy; OpenStreetMap contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
 
               {/* CAPA 1: CLUSTERS */}
               {activeLayer === 'clusters' && (

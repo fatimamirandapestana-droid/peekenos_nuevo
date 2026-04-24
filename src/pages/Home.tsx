@@ -168,8 +168,8 @@ export default function Home() {
       <div className="h-[600px] rounded-xl overflow-hidden shadow-md border border-stone-200 relative z-0">
         <MapContainer center={position} zoom={10} style={{ height: '100%', width: '100%' }}>
           <TileLayer
-            attribution='&copy; Stadia Maps &copy; OpenMapTiles &copy; OpenStreetMap contributors'
-            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+            attribution='&copy; OpenStreetMap contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MapController center={position} />
 
