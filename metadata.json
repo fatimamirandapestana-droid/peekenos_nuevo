@@ -1,0 +1,5 @@
+{
+  "name": "Peekeños",
+  "description": "Plataforma para encontrar mascotas perdidas y reportar avistamientos.",
+  "requestFramePermissions": ["geolocation"]
+}
