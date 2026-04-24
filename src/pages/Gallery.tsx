@@ -28,7 +28,7 @@ export default function Gallery() {
   const cities = Array.from(new Set(reports.map(r => r.city))).filter(Boolean).sort();
 
   useEffect(() => {
-    fetch('/api/reports')
+    fetch('https://peekenos-api.onrender.com/api/reports')
       .then(res => res.json())
       .then(data => {
         setReports(data);

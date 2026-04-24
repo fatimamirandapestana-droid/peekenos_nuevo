@@ -32,7 +32,7 @@ export default function Similarities() {
 
   // Cargar todas las mascotas disponibles al inicio
   useEffect(() => {
-    fetch('/api/reports')
+    fetch('https://peekenos-api.onrender.com/api/reports')
       .then(res => res.json())
       .then(data => setReports(data))
       .catch(err => console.error("Error al cargar reportes:", err));
@@ -45,7 +45,7 @@ export default function Similarities() {
     setResults(null); // Limpiar resultados previos
 
     try {
-      const res = await fetch(`/api/reports/similar/${selectedId}`);
+      const res = await fetch(`https://peekenos-api.onrender.com/api/reports/similar/${selectedId}`);
       if (!res.ok) throw new Error('Error en el servidor');
       const data = await res.json();
       setResults(data);

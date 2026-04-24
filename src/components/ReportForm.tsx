@@ -217,8 +217,7 @@ export default function ReportForm({ type }: ReportFormProps) {
         }
       });
 
-
-      const res = await fetch('/api/reports', {
+      const res = await fetch('https://peekenos-api.onrender.com/api/reports', {
         method: 'POST',
         // No enviamos Content-Type manual, el navegador lo pone con el boundary de FormData
         body: data

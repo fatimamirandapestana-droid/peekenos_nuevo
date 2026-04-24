@@ -58,7 +58,7 @@ export default function ReportDetail() {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const res = await fetch(`/api/reports/${id}`);
+        const res = await fetch(`https://peekenos-api.onrender.com/api/reports/${id}`);
         if (!res.ok) throw new Error('Report not found');
         const data = await res.json();
         setReport(data);
@@ -76,7 +76,7 @@ export default function ReportDetail() {
     if (recoverConfirmText !== "esta mascota fue encontrada") return;
 
     try {
-      const res = await fetch(`/api/reports/${id}/status`, {
+      const res = await fetch(`https://peekenos-api.onrender.com/api/reports/${id}/status`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'recovered' })
@@ -98,7 +98,7 @@ export default function ReportDetail() {
   const handleDelete = async () => {
     if (confirmText !== "ESTOY SEGURO, ELIMINAR") return;
     try {
-      const res = await fetch(`/api/reports/${id}`, { method: 'DELETE' });
+      const res = await fetch(`https://peekenos-api.onrender.com/api/reports/${id}`, { method: 'DELETE' });
       if (res.ok) {
         navigate('/');
       } else {

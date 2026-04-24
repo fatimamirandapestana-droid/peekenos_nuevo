@@ -77,7 +77,7 @@ export default function Dashboard() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    fetch('/api/reports')
+    fetch('https://peekenos-api.onrender.com/api/reports')
       .then(res => res.json())
       .then(data => {
         setReports(data);

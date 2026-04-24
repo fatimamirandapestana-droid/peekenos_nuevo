@@ -96,7 +96,7 @@ export default function Dashboard() {
   const [speciesFilter, setSpeciesFilter] = useState<'all' | 'dog' | 'cat'>('all');
 
   useEffect(() => {
-    fetch('/api/reports')
+    fetch('https://peekenos-api.onrender.com/api/reports')
       .then(res => res.json())
       .then(data => {
         setReports(data);
